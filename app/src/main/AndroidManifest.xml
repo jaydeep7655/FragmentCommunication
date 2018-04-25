@@ -21,7 +21,6 @@
         </activity>
         <activity android:name=".ProductHeaderViewActivity" />
         <activity android:name=".CommunicationActivity" />
-        <activity android:name=".FragmentToFragmentActivity"></activity>
     </application>
 
 </manifest>
