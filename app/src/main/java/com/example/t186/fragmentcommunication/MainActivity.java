@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Intent i = new Intent(activity, CommunicationActivity.class);
                         startActivity(i);
                     } else if (position == 1) {
+                        Intent i = new Intent(activity, RoomDataBaseActivity.class);
+                        startActivity(i);
 
                     }
                 }));

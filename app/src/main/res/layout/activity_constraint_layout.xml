@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_with_title" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white"
+            android:isScrollContainer="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/llRootLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="17dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="29dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    tools:ignore="Suspicious0dp">
+
+                    <requestFocus />
+                </TextView>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_border_grey"
+                    android:gravity="center_vertical"
+                    android:hint="First Name"
+                    android:padding="10dp"
+                    android:textColorHint="@color/gray"
+                    app:errorEnabled="false"
+                    app:hintAnimationEnabled="false">
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="20dp"
+                        android:gravity="left|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:paddingBottom="18dp"
+                        android:text=""
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_sixteen" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_border_grey"
+                    android:gravity="center_vertical"
+                    android:hint="Last Name"
+                    android:padding="10dp"
+                    android:textColorHint="@color/gray"
+                    app:errorEnabled="false"
+                    app:hintAnimationEnabled="false">
+
+                    <EditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="20dp"
+                        android:gravity="left|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="4dp"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_sixteen" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_border_grey"
+                    android:gravity="center_vertical"
+                    android:hint="Age"
+                    android:padding="10dp"
+                    android:textColorHint="@color/gray"
+                    app:errorEnabled="false"
+                    app:hintAnimationEnabled="false">
+
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="20dp"
+                        android:gravity="left|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="4dp"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_sixteen" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_border_grey"
+                    android:gravity="center_vertical"
+                    android:hint="Email"
+                    android:padding="10dp"
+                    android:textColorHint="@color/gray"
+                    app:errorEnabled="false"
+                    app:hintAnimationEnabled="false">
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="20dp"
+                        android:gravity="left|center_vertical"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="4dp"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_sixteen" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_bg_blue"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="Save"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_sixteen"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

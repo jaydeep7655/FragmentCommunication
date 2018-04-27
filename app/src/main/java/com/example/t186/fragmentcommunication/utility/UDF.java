@@ -101,11 +101,17 @@ public class UDF {
     private static final String emailPattern = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     static MediaPlayer player = null;
 
-    public static boolean EmailValidation(String Email) {
-        if (Email.matches(emailPattern)) {
+    /* Check for valis email pattern
+    *
+            * @param str a Strig value to be matchedfor Email ID
+    * @return a Boolean (TRUE or FALSE)
+    */
+    public static boolean emailMatches(String str) {
+        String emailPattern = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        if (str.matches(emailPattern)) {
             return true;
-        } else
-            return false;
+        }
+        return false;
     }
 
     public static void EnableGPS(Activity activity) {

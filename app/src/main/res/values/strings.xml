@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--validation Messages-->
+    <string name="error_field_required">This field is required</string>
+
+    <string name="error_invalid_email">Invalid email id</string>
+    <string name="minimum_3">Minimum 3 character Required</string>
 </resources>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#252C40</color>
+    <color name="colorPrimaryDark">#1C2333</color>
+    <color name="colorAccent">#fc6830</color>
+    <color name="white">#FFFFFF</color>
+    <color name="off_white">#e3ffffff</color>
+    <color name="white_nav_drawer">#DEFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#909090</color>
+    <color name="lignt_gray">#ededed</color>
+    <color name="very_light_gray">#f2f2f2</color>
+    <color name="nav_icon_light">#B2B2B2</color>
+    <color name="border_gray">#d2d2d2</color>
+    <color name="yellow_light">#fefbcf</color>
+    <color name="green_light">#24af57</color>
+    <color name="red_badge">#f1404b</color>
+    <color name="divider_color">#e3e3e3</color>
+    <color name="notification_item_read_color">#e9e9e9</color>
+    <color name="orange">#ff6000</color>
+    <color name="light_green">#e9ffea</color>
+
+    <!--SignIn Scree-->
+    <color name="text_black">#de000000</color>
+    <color name="blue">#0076ff</color>
+
+
 </resources>
