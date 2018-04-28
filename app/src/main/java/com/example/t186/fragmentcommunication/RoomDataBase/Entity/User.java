@@ -25,13 +25,13 @@ public class User {
     private int age;
 
     @ColumnInfo(name = "email")
-    private int email;
+    private String email;
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

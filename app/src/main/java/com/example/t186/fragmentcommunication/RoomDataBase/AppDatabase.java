@@ -29,7 +29,9 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             AppDatabase.class, DATABASE_NAME)
-                          //  .addMigrations(MIGRATION_1_2)
+                            // allowing main thread queries, just for testing
+                            .allowMainThreadQueries()
+                            //  .addMigrations(MIGRATION_1_2)
                             .build();
                 }
             }

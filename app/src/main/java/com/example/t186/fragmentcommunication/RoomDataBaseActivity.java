@@ -6,8 +6,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.t186.fragmentcommunication.RoomDataBase.Entity.User;
 import com.example.t186.fragmentcommunication.utility.UDF;
+
+import io.reactivex.Single;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class RoomDataBaseActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -80,9 +86,30 @@ public class RoomDataBaseActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         if (v == btnSubmit) {
             if (validate()) {
+                UDF.hideKeyboard(activity);
+                User user = new User();
+                user.setFirstName(etFirstName.getText().toString());
+                user.setLastName(etLastName.getText().toString());
+                user.setAge(Integer.parseInt(etAge.getText().toString()));
+                user.setEmail(etEmail.getText().toString());
 
+                Single.fromCallable(() -> MyApplication.appDatabase.userDao().insertUser(user))
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(aLong -> {
+                            initilizeEditText();
+                            Toast.makeText(activity, "inserted Count  ::" + aLong, Toast.LENGTH_SHORT).show();
+                        });
             }
         }
 
+    }
+
+    private void initilizeEditText() {
+        etFirstName.setText("");
+        etLastName.setText("");
+        etAge.setText("");
+        etEmail.setText("");
+        etFirstName.requestFocus();
     }
 }
