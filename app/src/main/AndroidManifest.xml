@@ -32,7 +32,7 @@
             android:name=".RoomDataBaseActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name=".sqlitedatabase.DisplayDatabaseActivity"></activity>
+        <activity android:name=".RoomDataBase.RoomdatabaseDisplayActivity"></activity>
     </application>
 
 </manifest>

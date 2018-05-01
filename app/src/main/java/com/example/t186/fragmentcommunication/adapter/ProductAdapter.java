@@ -22,7 +22,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
 
     private LayoutInflater inflater;
-    ArrayList<Result> arResult;
+    private ArrayList<Result> arResult;
     private OnItemClickListener onItemClickListener;
     //private OnItemClickListener onFirstNameClickListener;
     // private OnItemClickListener  onLastNameClickListener;
@@ -47,7 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ProductViewHolder(inflater.inflate(R.layout.custom_product_layout, parent, false));
+        return new ProductViewHolder(inflater.inflate(R.layout.item_product_layout, parent, false));
     }
 
     @Override
@@ -68,12 +68,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         ProductViewHolder(View itemView) {
             super(itemView);
-            tvFirstname = (TextView) itemView.findViewById(R.id.tvFirstname);
-            tvLastname = (TextView) itemView.findViewById(R.id.tvLastname);
-            tvSku = (TextView) itemView.findViewById(R.id.tvSku);
-            tvEmail = (TextView) itemView.findViewById(R.id.tvEmail);
-            tvSuppliername = (TextView) itemView.findViewById(R.id.tvSuppliername);
-            tvCity = (TextView) itemView.findViewById(R.id.tvCity);
+            tvFirstname = itemView.findViewById(R.id.tvFirstname);
+            tvLastname = itemView.findViewById(R.id.tvLastname);
+            tvSku = itemView.findViewById(R.id.tvSku);
+            tvEmail = itemView.findViewById(R.id.tvEmail);
+            tvSuppliername = itemView.findViewById(R.id.tvSuppliername);
+            tvCity = itemView.findViewById(R.id.tvCity);
 
 
             /*tvFirstname.setOnClickListener(new View.OnClickListener() {

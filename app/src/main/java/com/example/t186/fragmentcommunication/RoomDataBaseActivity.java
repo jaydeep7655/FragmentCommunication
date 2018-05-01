@@ -1,5 +1,6 @@
 package com.example.t186.fragmentcommunication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.t186.fragmentcommunication.RoomDataBase.Entity.User;
+import com.example.t186.fragmentcommunication.RoomDataBase.RoomdatabaseDisplayActivity;
 import com.example.t186.fragmentcommunication.utility.UDF;
 
 import io.reactivex.Single;
@@ -98,6 +100,7 @@ public class RoomDataBaseActivity extends AppCompatActivity implements View.OnCl
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(aLong -> {
                             initilizeEditText();
+                            startActivity(new Intent(activity, RoomdatabaseDisplayActivity.class));
                             Toast.makeText(activity, "inserted Count  ::" + aLong, Toast.LENGTH_SHORT).show();
                         });
             }

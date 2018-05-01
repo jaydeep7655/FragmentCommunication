@@ -1,6 +1,7 @@
 package com.example.t186.fragmentcommunication.rest;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.example.t186.fragmentcommunication.utility.UDF;
 
@@ -19,7 +20,7 @@ public class ConnectivityInterceptor implements Interceptor {
         this.context = context;
     }
     @Override
-    public Response intercept(Chain chain) throws IOException {
+    public Response intercept(@NonNull Chain chain) throws IOException {
         boolean isNetworkActive = UDF.isOnline(context);
         if (!isNetworkActive) {
             throw new NoConnectivityException();

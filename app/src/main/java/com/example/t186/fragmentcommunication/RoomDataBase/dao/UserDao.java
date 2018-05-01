@@ -24,7 +24,7 @@ public interface UserDao {
 
 
     @Query("SELECT * from user")
-    Maybe<List<User>> liGatAll();
+    Maybe<List<User>> liAllUser();
 
     @Query("SELECT * from user where first_name Like :firstName AND last_name LIKE :lastName")
     User findByName(String firstName, String lastName);

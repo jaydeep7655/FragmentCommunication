@@ -9,4 +9,5 @@
 
     <string name="error_invalid_email">Invalid email id</string>
     <string name="minimum_3">Minimum 3 character Required</string>
+    <string name="search_hint">Search</string>
 </resources>

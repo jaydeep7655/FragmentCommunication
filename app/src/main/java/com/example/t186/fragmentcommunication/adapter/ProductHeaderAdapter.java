@@ -30,7 +30,7 @@ public class ProductHeaderAdapter extends RecyclerView.Adapter<ProductHeaderAdap
     public ProductHeaderAdapter(ProductHeaderViewActivity activity, Map<String, ArrayList<Result>> ProductMap) {
         this.activity = activity;
         this.ProductMap = ProductMap;
-        alHeader = new ArrayList<String>(ProductMap.keySet());
+        alHeader = new ArrayList<>(ProductMap.keySet());
         // setData(alResult, false);
         mInflater = LayoutInflater.from(activity);
     }
@@ -38,7 +38,7 @@ public class ProductHeaderAdapter extends RecyclerView.Adapter<ProductHeaderAdap
     @Override
     public ProductHeaderAdapter.ProductListingHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = mInflater
-                .inflate(R.layout.custom_product_layout, parent, false);
+                .inflate(R.layout.item_product_layout, parent, false);
         return new ProductListingHolder(v);
     }
 
@@ -115,24 +115,24 @@ public class ProductHeaderAdapter extends RecyclerView.Adapter<ProductHeaderAdap
         viewholder.header.setText(headerTitle.toUpperCase());
     }
 
-    public class ProductListingHolder extends RecyclerView.ViewHolder {
+    class ProductListingHolder extends RecyclerView.ViewHolder {
         TextView tvFirstname, tvLastname, tvSku, tvEmail, tvSuppliername, tvCity;
 
-        public ProductListingHolder(View itemView) {
+        ProductListingHolder(View itemView) {
             super(itemView);
-            tvFirstname = (TextView) itemView.findViewById(R.id.tvFirstname);
-            tvLastname = (TextView) itemView.findViewById(R.id.tvLastname);
-            tvSku = (TextView) itemView.findViewById(R.id.tvSku);
-            tvEmail = (TextView) itemView.findViewById(R.id.tvEmail);
-            tvSuppliername = (TextView) itemView.findViewById(R.id.tvSuppliername);
-            tvCity = (TextView) itemView.findViewById(R.id.tvCity);
+            tvFirstname = itemView.findViewById(R.id.tvFirstname);
+            tvLastname = itemView.findViewById(R.id.tvLastname);
+            tvSku = itemView.findViewById(R.id.tvSku);
+            tvEmail = itemView.findViewById(R.id.tvEmail);
+            tvSuppliername = itemView.findViewById(R.id.tvSuppliername);
+            tvCity = itemView.findViewById(R.id.tvCity);
         }
     }
 
-    public class HeaderHolder extends RecyclerView.ViewHolder {
-        public TextView header;
+    class HeaderHolder extends RecyclerView.ViewHolder {
+        TextView header;
 
-        public HeaderHolder(View itemView) {
+        HeaderHolder(View itemView) {
             super(itemView);
             header = itemView.findViewById(R.id.tvHeader);
 
