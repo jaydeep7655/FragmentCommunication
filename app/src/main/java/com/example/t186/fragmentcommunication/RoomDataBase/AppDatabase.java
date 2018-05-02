@@ -31,7 +31,7 @@ public abstract class AppDatabase extends RoomDatabase {
                             AppDatabase.class, DATABASE_NAME)
                             // allowing main thread queries, just for testing
                            // .allowMainThreadQueries()
-                            //  .addMigrations(MIGRATION_1_2)
+                           // .addMigrations(MIGRATION_1_2)
                             .build();
                 }
             }

@@ -87,6 +87,8 @@ public class RoomDataBaseActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if (v == btnSubmit) {
+
+            //  startActivity(new Intent(activity, RoomdatabaseDisplayActivity.class));
             if (validate()) {
                 UDF.hideKeyboard(activity);
                 User user = new User();
